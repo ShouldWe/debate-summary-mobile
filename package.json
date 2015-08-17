@@ -33,10 +33,12 @@
     "gulp-uglify": "^0.2.1",
     "gulp-usemin": "^0.3.3",
     "jshint-stylish": "^0.1.5",
+    "run-sequence": "^0.3.6"
+  },
+  "devDependencies": {
     "karma": "^0.12.10",
     "karma-coverage": "^0.2.1",
     "karma-jasmine": "^0.2.2",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "run-sequence": "^0.3.6"
+    "karma-phantomjs-launcher": "^0.1.4"
   }
 }
