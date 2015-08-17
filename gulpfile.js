@@ -277,13 +277,7 @@
       .pipe(gulp.dest('public/styles/'));
   });
 
-  /**
-    * @namespace gulp
-    * @name server
-    * @desc
-    * Serve compiled files
-    */
-  gulp.task('server', ['build:production'], function(){
+  gulp.task('http:server', function(){
     return connect.server({
       port: process.env.PORT || 3000,
       root: 'public',
@@ -301,6 +295,17 @@
       }
     });
   });
+
+  /**
+    * @namespace gulp
+    * @name server
+    * @desc
+    * Serve compiled files
+    */
+  gulp.task('server', [
+    'build:production',
+    'http:server'
+  ]);
 
   /**
    * @namespace gulp
@@ -335,7 +340,7 @@
    * @desc
    * Watches for file changes and runs a task
    */
-  gulp.task('watch', ['build:dev'], function () {
+  gulp.task('watch', ['build:dev', 'http:server'], function () {
     return gulp.watch([
       'app/*.{txt,html}',
       'app/styles/**/*.css',

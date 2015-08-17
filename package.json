@@ -2,7 +2,7 @@
   "name": "should-we-mobile",
   "version": "1.0.1p1",
   "description": "Mobile site for ShouldWe",
-  "main": "index.js",
+  "main": "app/scripts/app.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp server",
     "test": "./node_modules/karma/bin/karma start --single-run --no-colors --reporters=dots,coverage --log-level=error --browsers=PhantomJS",
