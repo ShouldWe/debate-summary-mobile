@@ -1,0 +1,27 @@
+{
+  "version": "{{@@Version}}",
+  "name": "{{@@SiteName}}",
+  "launch_path": "/index.html",
+  "description": "{{@@Description}}",
+  "icons": {
+    "32": "/images/touch/icon-32.png",
+    "60": "/images/touch/icon-60.png",
+    "128": "/images/touch/icon-128.png"
+  },
+  "developer": {
+    "name": "{{@@SiteName}}",
+    "url": "{{@@URL}}"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "{{@@SiteName}}",
+      "description": "{{@@Description}}"
+    }
+  }
+}

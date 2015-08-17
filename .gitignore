@@ -1,0 +1,5 @@
+coverage
+node_modules
+public
+*DS_Store
+app/bower_components

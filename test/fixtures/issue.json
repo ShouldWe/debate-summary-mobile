@@ -1,0 +1,167 @@
+{
+  "id": 1,
+  "image": {
+    "thumb": "http://beta.shouldwe.org/uploads/issue/image/4/thumb_imgres.jpeg",
+    "normal": "http://beta.shouldwe.org/uploads/issue/image/4/normal_imgres.jpeg",
+    "original": "http://beta.shouldwe.org/uploads/issue/image/4/imgres.jpeg"
+  },
+  "title": "Should the UK leave the European Union?",
+  "context": [
+    {
+      "href": "http://news.bbc.co.uk/onthisday/hi/dates/stories/january/1/newsid_2459000/2459167.stm",
+      "content": "The UK has been a member of the European Union and its predecessor bodies since 1973,"
+    },
+    {
+      "href": "http://en.wikipedia.org/wiki/United_Kingdom_European_Communities_membership_referendum,_1975",
+      "content": "with continued membership of the \"Common Market\" confirmed by a 1975 Referendum."
+    },
+    {
+      "href": "http://www.dailymail.co.uk/news/article-182064/Britain-pro-European-consensus.html",
+      "content": "Since then there has been consensus in favour of continued membership across the major parties,"
+    },
+    {
+      "href": "http://en.wikipedia.org/wiki/Referendums_in_the_United_Kingdom",
+      "content": "and no nationwide vote on changes which have increased the role of the EU across a range of formerly domestic policy areas."
+    },
+    {
+      "href": "http://www.ukip.org/",
+      "content": "However the UK Independence Party, which campaigns for UK withdrawal from the EU, has seen notable political successes,"
+    },
+    {
+      "href": "http://news.bbc.co.uk/1/shared/bsp/hi/elections/euro/09/html/ukregion_999999.stm",
+      "content": "gaining 16.5% of the vote  in the 2009 European Parliament Elections, and placing second in those elections,"
+    },
+    {
+      "href": "http://en.wikipedia.org/wiki/United_Kingdom_local_elections,_2013",
+      "content": "and a notional national share of 23%  of the vote in the 2013 English local government elections."
+    },
+    {
+      "href": "http://www.bbc.co.uk/news/uk-politics-23186128",
+      "content": "Following this, the Prime Minister, David Cameron, supported moves to provide for a referendum after the 2015 election,"
+    },
+    {
+      "href": "http://labourlist.org/2013/08/could-ed-be-about-to-announce-an-eu-referendum/",
+      "content": "and there is speculation that Ed Miliband, Leader of the Labour Party, may match this pledge or&nbsp;go further."
+    },
+    {
+      "href": "http://en.wikipedia.org/wiki/Withdrawal_from_the_European_Union#Greenland",
+      "content": "Leaving the European Union is rare, with only  Greenland having ever done so,"
+    },
+    {
+      "href": "http://en.wikipedia.org/wiki/Withdrawal_from_the_European_Union#Past_withdrawals",
+      "content": "together with non-European former dependent French territories.</a> A number of European countries,"
+    },
+    {
+      "href": "http://www.bbc.co.uk/news/uk-politics-20450600",
+      "content": "most notably Norway and Switzerland"
+    }
+  ],
+  "noes": [
+    {
+      "title": "British laws should be made by British voters",
+      "body": [
+        {
+          "content": "The European Union represents a declining share of the global economy, from 26% in 1980, to 22% in 2003, and a forecast 17% in 2015.",
+          "href": "http://www.broadbanduk.org/wp-content/uploads/2012/11/global_europe_121005.pdf"
+        },
+        {
+          "content": "The European Union limits the UK's ability to take advantage of growth elsewhere in the world, both by acting as a joint negotiator in trade deals so that the UK cannot advance its own interest, and through the imposition of a Common External Tariff - a tax barrier to trade with the rest of the world.",
+          "href": "http://ec.europa.eu/taxation_customs/customs/customs_duties/tariff_aspects/"
+        }
+      ]
+    }
+  ],
+  "yesses": [
+    {
+      "title": "Britain should trade and negotiate with the world",
+      "body": [
+        {
+          "content": "Estimates for the proportion of laws in EU member states which originate with the EU vary from 6% to 84%.",
+          "href": "http://news.bbc.co.uk/onthisday/hi/dates/stories/january/1/newsid_2459000/2459167.stm"
+        },
+        {
+          "content": "What is not in doubt is that across a range of issues of intense salience to British voters, from immigration laws",
+          "href": "http://europa.eu/legislation_summaries/justice_freedom_security/free_movement_of_persons_asylum_immigration/"
+        },
+        {
+          "content": "to NHS privatisation, the EU's influence radically limits the ability of national politicians to meet the aspirations of British voters.",
+          "href": "http://www.ghwatch.org/sites/www.ghwatch.org/files/globalisationhealthlaw.pdf"
+        }
+      ]
+    }
+  ],
+  "perspectives": [
+    {
+      "title": "Legal targets don't work",
+      "body": [
+        {
+          "content": "The Child Poverty Act has not stopped the Government pursuing policies which increase child poverty.",
+          "href": "http://www.cpag.org.uk/child-poverty-facts-and-figures#footnote10_j71i3fw"
+        }
+      ]
+    },
+    {
+      "title": "Aid doesn't work",
+      "body": [
+        {
+          "content": "Economists like Dambisa Moyo argue that aid does more harm than good, particularly in Africa. ",
+          "href": "http://www.dambisamoyo.com/books-and-publications/book/dead-aid"
+        }
+      ]
+    }
+  ],
+  "relevances": [
+    {
+      "title": "Relevant Article",
+      "body": [
+        {
+          "content": "Hyperlink to relevant documentation",
+          "href": "http://example.com"
+        }
+      ]
+    }
+  ],
+  "elsewhere": [
+    {
+      "content": "Eu Budget",
+      "cite": "BBC Europe",
+      "updatedAt": "2014-04-11T15:24:00Z",
+      "href": "http://news.bbc.co.uk/go/rss/-/2/hi/europe/8036096.stm"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Aid"
+    },
+    {
+      "name": "Development"
+    },
+    {
+      "name": "Tax"
+    }
+  ],
+  "contributors": [
+    {
+      "id": 1,
+      "name": "George Bevis",
+      "bio": "Founder of ShouldWe",
+      "avatar": {
+        "thumb": "http://beta.shouldwe.org/uploads/user/avatar/3/thumb_face.jpeg",
+        "normal": "http://beta.shouldwe.org/uploads/user/avatar/3/normal_face.jpeg",
+        "original": "http://beta.shouldwe.org/uploads/user/avatar/3/face.jpeg"
+      }
+    }
+  ],
+  "updatedBy": {
+    "id": 1,
+    "name": "George Bevis",
+    "bio": "Founder of ShouldWe",
+    "avatar": {
+      "thumb": "http://beta.shouldwe.org/uploads/user/avatar/3/thumb_face.jpeg",
+      "normal": "http://beta.shouldwe.org/uploads/user/avatar/3/normal_face.jpeg",
+      "original": "http://beta.shouldwe.org/uploads/user/avatar/3/face.jpeg"
+    }
+  },
+  "createdAt": "2014-04-14T16:01:12Z",
+  "updatedAt": "2014-04-14T16:01:12Z"
+}

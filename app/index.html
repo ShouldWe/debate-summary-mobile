@@ -1,0 +1,118 @@
+<!--
+    Debate Summary Mobile - Croudsource arguments and debates
+    Copyright (C) 2015 Policy Wiki Educational Foundation LTD <hello@shouldwe.org>
+
+    This file is part of Debate Summary Mobile.
+
+    Debate Summary Mobile is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Debate Summary Mobile is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Debate Summary Mobile.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en_GB" ng-app="shouldwe">
+  <head>
+    <meta charset="utf-8">
+    <style>.ng-cloak{display:none;}</style>
+    <title document-title="Debate Summary">Debate Summary</title>
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" href="images/touch/icon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch/icon-76@2x.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch/icon-60@2x.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch/icon-76.png">
+    <link rel="shortcut icon" type="image/png" sizes="152x152" href="images/touch/icon-76@2x.png">
+    <link rel="shortcut icon" type="image/png" href="images/touch/icon-76.png">
+    <meta name="msapplication-TileImage" content="images/touch/icon-72@2x.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <!-- build:css styles/app.css -->
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css">
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.css">
+
+    <link rel="stylesheet" href="styles/flexbox.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/social.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/search.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-controller="AppCtrl">
+    <div class="alert alert-error text-center ng-cloak" ng-hide="applicationOK">
+      <img src="/images/debate-summary-vertical.svg"
+      height="234" class="home-logo"
+      alt="Debate Summary"/>
+      Oops, something went wrong.
+    </div>
+
+    <div class="loader-spinner" ng-show="isLoading">
+      <i class="fa fa-spinner fa-spin"></i> Loading
+    </div>
+
+    <div class="app" ng-class="{'has-topnavbar': topNavbar,'has-bottomnavbar': bottomNavbar}">
+      <div ng-include="'views/_navbar.html'" ng-show="topNavbar"></div>
+
+      <div class="app-body">
+        <ng-view></ng-view>
+      </div>
+
+      <div overlay="welcome" default="{{showWelcome()}}" ng-controller="WelcomeCtrl">
+        <div class="overlay-body-inner">
+          <img src="/images/debate-summary-vertical.svg" class="home-logo small-logo"/>
+          <p>
+            Welcome! This looks like your first visit to Debate Summary, a crowd-sourced summary of public policy debates. Enjoy looking around!
+          </p>
+          <p>
+            By the way, we use cookies to improve your experience.
+          </p>
+          <p toggle="off" bubble target="welcome" ng-click="cookiesOK()" class="welcome-bottom">
+            <span class="btn btn-primary btn-lg">Ok, got it</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-touch.min.js"></script>
+    <!-- build:js scripts/app.js -->
+    <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js"></script>
+    <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui-scrollable-overthrow.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/config/http.js"></script>
+    <script src="scripts/config/location.js"></script>
+    <script src="scripts/config/route.js"></script>
+    <script src="scripts/constants/endpoint.js"></script>
+    <script src="scripts/controllers/app.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/issue.js"></script>
+    <script src="scripts/controllers/legal.js"></script>
+    <script src="scripts/controllers/search.js"></script>
+    <script src="scripts/controllers/encode_uri.js"></script>
+    <script src="scripts/controllers/welcome.js"></script>
+    <script src="scripts/directives/document-title.js"></script>
+    <script src="scripts/services/trending.js"></script>
+    <script src="scripts/services/issue.js"></script>
+    <script src="scripts/services/page-title.js"></script>
+
+    <!-- endbuild -->
+
+  </body>
+</html>

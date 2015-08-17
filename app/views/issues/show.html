@@ -1,0 +1,129 @@
+<!--
+    Debate Summary Mobile - Croudsource arguments and debates
+    Copyright (C) 2015 Policy Wiki Educational Foundation LTD <hello@shouldwe.org>
+
+    This file is part of Debate Summary Mobile.
+
+    Debate Summary Mobile is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Debate Summary Mobile is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Debate Summary Mobile.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class='container'>
+      <h2>{{issue.title}}</h2>
+      <img id="issue-image" ng-src="{{issue.image.thumb}}" width="175" style="float:left; padding: 10px" />
+
+      <span class="statement" href="#evidence" toggle="on" ng-click="showEvidence(text)" ng-repeat="text in issue.context | limitTo:contextLimit ">{{text.content}}</span>
+      <a ng-click="toggleContext(contextLimit)" ng-hide="contextLimit > 10">more</a>
+      <a ng-click="toggleContext(contextLimit)" ng-show="contextLimit > 10">less</a>
+
+      <div class="clearfix"></div>
+
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading" toggle target="collapseOne" parent-active-class='active' parent-inactive-class='inactive'>
+            <h4 class="panel-title">
+              <span class="active-arrow fa fa-caret-down"></span><span class="inactive-arrow fa fa-caret-right"></span>&nbsp;"Yes" Arguments
+            </h4>
+          </div>
+          <div id="collapseOne" toggleable active-class="in" default="active" class="panel-collapse collapse">
+            <div class="panel-body" ng-repeat="issue in issue.yesses | limitTo:contextLimit " ng-show="issue.title.length > 0">
+              <div class="statement-title">{{issue.title}}</div>
+              <span class="statement" href="#evidence" toggle="on" ng-click="showEvidence(text)" ng-repeat="text in issue.body | limitTo:contextLimit ">{{text.content}} </span>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" toggle target="collapseTwo" parent-active-class='active' parent-inactive-class='inactive'>
+            <h4 class="panel-title">
+              <span class="active-arrow fa fa-caret-down"></span><span class="inactive-arrow fa fa-caret-right"></span>&nbsp;"No" Arguments
+            </h4>
+          </div>
+          <div id="collapseTwo" toggleable active-class="in" default="active" class="panel-collapse collapse">
+            <div class="panel-body" ng-repeat="issue in issue.noes | limitTo:contextLimit " ng-show="issue.title.length > 0">
+              <div class="statement-title">{{issue.title}}</div>
+              <span class="statement" href="#evidence" toggle="on" ng-click="showEvidence(text)" ng-repeat="text in issue.body | limitTo:contextLimit ">{{text.content}} </span>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" toggle target="collapseThree" parent-active-class='active' parent-inactive-class='inactive'>
+            <h4 class="panel-title">
+              <span class="active-arrow fa fa-caret-down"></span><span class="inactive-arrow fa fa-caret-right"></span>&nbsp;Leading Voices
+            </h4>
+          </div>
+          <div id="collapseThree" toggleable active-class="in" default="active" class="panel-collapse collapse">
+            <div class="panel-body" ng-repeat="issue in issue.perspectives | limitTo:contextLimit " ng-show="issue.title.length > 0">
+              <div class="statement-title">{{issue.title}}</div>
+              <span class="statement" href="#evidence" toggle="on" ng-click="showEvidence(text)" ng-repeat="text in issue.body | limitTo:contextLimit ">{{text.content}} </span>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" toggle target="collapseFour" parent-active-class='active' parent-inactive-class='inactive'>
+            <h4 class="panel-title">
+              <span class="active-arrow fa fa-caret-down"></span><span class="inactive-arrow fa fa-caret-right"></span>&nbsp;Notable Resources
+            </h4>
+          </div>
+          <div id="collapseFour" toggleable active-class="in" default="active" class="panel-collapse collapse">
+            <div class="panel-body" ng-repeat="issue in issue.relevances | limitTo:contextLimit " ng-show="issue.title.length > 0">
+              <div class="statement-title">{{issue.title}}</div>
+              <span class="statement" href="#evidence" toggle="on" ng-click="showEvidence(text)" ng-repeat="text in issue.body | limitTo:contextLimit ">{{text.content}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br/>
+      <div class="clearfix">
+        <div class="pull-left">
+          <a href="{{issue.canonicalUrl}}/?nomobile=true">Desktop Version</a>
+        </div>
+        <div class="pull-right">
+          <a href="/legal">Legal</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div ng-include="'views/_share.html'"></div>
+
+<div class="evidence" overlay="evidence">
+  <div class="overlay-body-inner">
+    <div class="evidence-text">&#8220;{{currentEvidence.content}}&#8221;</div>
+    <br>
+    <pre class="evidence-link">{{currentEvidence.href}}</pre>
+
+    <div class="share-buttons">
+      <div class="social">
+        <a class="fa fa-facebook" ng-click="share('facebook', currentEvidence)"></a>
+      </div>
+      <div class="social">
+        <a class="fa fa-twitter" ng-click="share('twitter', currentEvidence)"></a>
+      </div>
+      <div class="social">
+        <a class="fa fa-linkedin" ng-click="share('linkedin', currentEvidence)"></a>
+      </div>
+    </div>
+
+    <br>
+    <div class="text-center">
+      <a toggle="off" bubble target="evidence" class="btn btn-default">Cancel</a>
+      <a class="btn btn-primary" ng-href="{{currentEvidence.href}}" target="_blank">Show Evidence</a>
+    </div>
+  </div>
+</div>
+

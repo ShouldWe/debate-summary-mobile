@@ -1,0 +1,62 @@
+/*
+ * Debate Summary Mobile - Croudsource arguments and debates
+ * Copyright (C) 2015 Policy Wiki Educational Foundation LTD <hello@shouldwe.org>
+ *
+ * This file is part of Debate Summary Mobile.
+ *
+ * Debate Summary Mobile is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Debate Summary Mobile is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Debate Summary Mobile.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.social {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  line-height: 40px;
+  font-size: 24px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 50%;
+  background: #eee;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.social a {
+  transition: color .3s;
+  color: #bbb;
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: #84868C;
+}
+
+.social a:active {
+  color: #59d;
+}
+
+.fa-twitter {
+  color: #55ACEE !important;
+}
+
+.fa-facebook {
+  color: #3B5998 !important;
+}
+
+.fa-linkedin {
+  color: #4875B4 !important;
+}
+
+

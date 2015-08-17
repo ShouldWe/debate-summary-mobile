@@ -1,0 +1,72 @@
+<!--
+    Debate Summary Mobile - Croudsource arguments and debates
+    Copyright (C) 2015 Policy Wiki Educational Foundation LTD <hello@shouldwe.org>
+
+    This file is part of Debate Summary Mobile.
+
+    Debate Summary Mobile is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Debate Summary Mobile is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Debate Summary Mobile.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<div class="scrollable home-page">
+  <div class="scrollable-content">
+    <div class='container'>
+      <img src="/images/debate-summary-vertical.svg"
+      width="400" class="home-logo"
+      alt="Debate Summary"/>
+
+      <div class="form-group">
+        <form name="searchForm" ng-submit="performSearch(searchQuery)">
+          <input ng-model="searchQuery" name="searchQuery" type="text" class="form-control home-search-form" placeholder="{{term || 'Search...'}}">
+          <input type=submit hidden>
+        </form>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <br/>
+
+      <div class="panel-group">
+        <div class="panel panel-default" ng-repeat="group in data.sections">
+          <div class="panel-heading" toggle target="sectionGroup{{$index}}" parent-active-class='active' parent-inactive-class='inactive'>
+            <h4 class="panel-title">
+              <span class="active-arrow fa fa-caret-down"></span><span class="inactive-arrow fa fa-caret-right"></span>
+              {{group.name}} ({{group.meta.totalIssues}})
+            </h4>
+          </div>
+          <div id="sectionGroup{{$index}}" toggleable active-class="in" default="active" class="panel-collapse collapse">
+            <div class="search-result list-group" toggle="off" target-class="results" bubble>
+
+              <a class="search-result flexbox list-group-item" href="/issues/{{result.id}}" ng-repeat="result in group.issues | limitTo:50">
+
+                <div class="flexbox-content flexbox-main flexbox-center">
+                  {{result.title}}
+                </div>
+                <div class="search-result-chevron flexbox-content flexbox-center">
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/legal">Legal</a>
+        -
+        <a href="https://debate-summary.herokuapp.com/?nomobile=true">Desktop Version</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>

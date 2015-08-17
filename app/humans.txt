@@ -1,0 +1,12 @@
+/* TEAM */
+
+{{@@Team}}
+
+/* SITE */
+
+  Version: {{@@Version}}
+  Environment: {{@@ENV}}
+  Last update: {{@@BuildDate}}
+  Components: {{@@Components}}
+  Standards: HTML5, CSS3, JSON, SVG, PNG
+  IDE: Vim
