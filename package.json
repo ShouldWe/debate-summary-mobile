@@ -4,6 +4,7 @@
   "description": "Mobile site for ShouldWe",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/.bin/gulp server",
     "test": "./node_modules/karma/bin/karma start --single-run --no-colors --reporters=dots,coverage --log-level=error --browsers=PhantomJS",
     "postinstall": "./node_modules/.bin/bower install"
   },
