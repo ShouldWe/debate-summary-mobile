@@ -1,24 +1,25 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    charlock_holmes (0.7.3)
-    copyright-header (1.0.15)
-      github-linguist (~> 2.6)
-    escape_utils (1.0.1)
-    github-linguist (2.12.0)
-      charlock_holmes (~> 0.7.3)
-      escape_utils (~> 1.0.1)
-      mime-types (~> 1.19)
-      pygments.rb (~> 0.6.0)
-    mime-types (1.25.1)
-    posix-spawn (0.3.11)
-    pygments.rb (0.6.3)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.2.0)
-    yajl-ruby (1.2.1)
+    charlock_holmes (0.7.6)
+    copyright-header (1.0.22)
+      github-linguist
+    escape_utils (1.2.1)
+    github-linguist (6.0.1)
+      charlock_holmes (~> 0.7.5)
+      escape_utils (~> 1.2.0)
+      mime-types (>= 1.19)
+      rugged (>= 0.25.1)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    rugged (0.27.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   copyright-header
+
+BUNDLED WITH
+   1.16.1
